@@ -12,6 +12,7 @@ export const PROJECTS: Project[] = [
       "https://t4.ftcdn.net/jpg/04/85/17/33/360_F_485173339_rHVWOWEwZneJpHqgFNiYJLSPQg7hNoAA.jpg",
     alt: "Weather API App",
   },
+
   {
     id: 2,
     title: "To Do List Web App",
