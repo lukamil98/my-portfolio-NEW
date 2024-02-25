@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -45,3 +46,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 "# lukas-portfolio" 
+=======
+# my-portfolio-NEW
+Code to my new portfolio web page.
+>>>>>>> a3c38b89fffd70557f93cf2ee5ca566f6da64768
