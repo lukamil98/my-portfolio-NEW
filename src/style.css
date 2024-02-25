@@ -1,0 +1,851 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Manrope", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: fit-content;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header-container {
+  min-height: 1000px;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 50%,
+    rgb(254, 212, 58) 50%,
+    rgb(254, 212, 58) 100%
+  );
+  color: white;
+}
+
+.portfolio-container {
+  min-height: 668px;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 50%,
+    rgb(254, 212, 58) 50%,
+    rgb(254, 212, 58) 100%
+  );
+  color: white;
+}
+
+.about-container {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 50%,
+    rgb(254, 212, 58) 50%,
+    rgb(254, 212, 58) 100%
+  );
+  color: white;
+}
+
+.contact-container {
+  height: 80vh;
+  background-color: rgb(255, 224, 110);
+  color: white;
+}
+
+.footer-container {
+  min-height: 100px;
+  background-color: rgba(244, 202, 53, 0.813);
+  color: white;
+}
+
+nav {
+  padding: 40px 80px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  float: left;
+}
+
+.burger-menu {
+  float: right;
+}
+
+/* NAVBAR CSS */
+
+#menu__toggle {
+  opacity: 0;
+  position: fixed;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 60px;
+  right: 80px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 90px;
+  right: -100%;
+  width: 140px;
+  height: 270px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+  transition-duration: 0.45s;
+  z-index: 1;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition-duration: 0.45s;
+}
+.menu__item:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(254, 212, 58);
+  transition: width 0.5s ease 0s, left 0.3s;
+}
+
+/* MAIN PAGE / HEADER CSS */
+
+.left-side {
+  display: block;
+  float: left;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.greeting > h4 {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.second-row {
+  margin-top: -35px;
+  font-size: 5rem;
+}
+
+.third-row {
+  margin-top: -40px;
+}
+
+.name > .first-row,
+.third-row {
+  color: #000000;
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+  font-size: 4rem;
+}
+
+.about-me {
+  font-weight: 500;
+  font-size: 1.6rem;
+  width: 400px;
+}
+
+.button-left {
+  border: 1px solid black;
+  border-color: rgb(254, 212, 58);
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  background-color: rgb(254, 212, 58);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Manrope";
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.right-side {
+  float: right;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+.button-right {
+  position: inherit;
+  border: 1px solid black;
+  border-color: #000000;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  margin-left: 32px;
+  margin-top: 43px;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: rgb(254, 212, 58);
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: "Manrope";
+  font-size: 1rem;
+}
+
+.button-left:hover {
+  transition: 0.3s ease-in-out;
+  margin-top: 2px;
+}
+
+.button-right:hover {
+  transition: 0.3s ease-in-out;
+  margin-top: 41px;
+}
+
+.my-image > img {
+  margin-top: 5%;
+  position: relative;
+  float: right;
+  right: 13%;
+  width: 300px;
+}
+
+.portfolio-title {
+  width: 100%;
+  display: block;
+  float: left;
+  font-size: 3rem;
+  margin-top: 10rem;
+  margin-left: 4rem;
+  font-weight: 700;
+  color: rgb(254, 212, 58);
+}
+/* PORTFOLIO PAGE CSS */
+
+.left-side-portfolio {
+  float: left;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.project-number {
+  margin-right: 2rem;
+}
+
+.project-title {
+  margin-bottom: 5rem;
+  float: left;
+}
+
+.project-description {
+  max-width: 500px;
+  color: rgb(217, 217, 217);
+  margin-bottom: 4rem;
+  margin-left: 5.4rem;
+}
+
+.project-made-with {
+  width: fit-content;
+  padding: 10px 0;
+  max-width: 500px;
+  font-weight: 700;
+  margin-left: 5.4rem;
+  border: 1px solid;
+  border-color: white black;
+}
+
+.button-left-website {
+  border: 1px solid black;
+  border-color: rgb(254, 212, 58);
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 5.5rem;
+  background-color: rgb(254, 212, 58);
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: "Manrope";
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.button-left-website:hover {
+  transition: 0.3s ease-in-out;
+  margin-top: 1.8rem;
+}
+
+.project-image > img {
+  position: relative;
+  text-align: center;
+  margin-right: 2rem;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.border-description {
+  float: left;
+  margin-left: 1rem;
+  padding: 10px 0;
+  border: 1px solid;
+  border-color: transparent transparent transparent gray;
+}
+
+/* ABOUT PAGE CSS */
+
+.about-title {
+  font-size: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+  font-weight: 700;
+  color: rgb(254, 212, 58);
+}
+
+.centered-about {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  border: 10px solid rgb(254, 212, 58);
+  height: 300px;
+  width: 700px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.my-about-image > img {
+  float: left;
+  width: 170px;
+  height: auto;
+  padding: 4rem;
+}
+
+.about-description {
+  float: left;
+  font-size: 1.1em;
+  padding-top: 75px;
+  width: 380px;
+}
+
+/* CONTACT PAGE CSS */
+
+.contact-title {
+  position: relative;
+  color: #000000;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 3rem;
+}
+
+.contact-info {
+  position: relative;
+  margin: 5vh auto;
+  border: 10px solid rgb(254, 212, 58);
+  height: fit-content;
+  width: 450px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.email,
+.phone,
+.cv {
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+.email > a,
+.phone > a,
+.cv > a {
+  text-decoration: none;
+  color: white;
+}
+
+.email > a:hover,
+.phone > a:hover,
+.cv > a:hover {
+  text-decoration: none;
+  color: rgb(254, 212, 58);
+}
+
+/* FOOTER CSS */
+
+/* Style all font awesome icons */
+
+.icons {
+  text-align: center;
+  padding-top: 2rem;
+}
+.fa {
+  padding: 10px;
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+  margin: 2rem;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ed417aaf;
+  color: white;
+}
+
+.fa-envelope {
+  background: #ffffff;
+  color: #05a5f0;
+}
+
+.fa-github {
+  background: #ffffff;
+  color: #0077af;
+}
+
+/* Large devices (laptops/desktops, 992px up to 1300px) */
+@media only screen and (max-width: 1300px) {
+  .second-row {
+    font-size: 3.8rem;
+  }
+
+  .name > .first-row,
+  .third-row {
+    font-size: 3rem;
+  }
+  .second-row {
+    margin-top: -30px;
+  }
+
+  .third-row {
+    margin-top: -30px;
+  }
+
+  .about-me {
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 400px;
+  }
+
+  .my-image > img {
+    width: 230px;
+  }
+
+  .portfolio-title {
+    font-size: 2.2rem;
+  }
+
+  .right-side > .button-right {
+    margin-left: 5px;
+    margin-top: 16px;
+  }
+
+  .right-side > .button-right:hover {
+    margin-left: 5px;
+    margin-top: 14px;
+  }
+
+  .about-title {
+    font-size: 4.5rem;
+  }
+
+  .project-description {
+    max-width: 300px;
+  }
+}
+
+/* Medium devices (laptops/desktops, 768 to 992px) */
+@media only screen and (max-width: 992px) {
+  .header-container {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 100%
+    );
+  }
+  .left-side {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .about-me {
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+  .second-row {
+    font-size: 4rem;
+  }
+
+  .name > .first-row,
+  .third-row {
+    font-size: 3.5rem;
+  }
+  .right-side {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .my-image > img {
+    width: 200px;
+    text-align: center;
+    margin-top: 4rem;
+    float: none;
+    right: 0%;
+  }
+
+  .portfolio-title {
+    font-size: 3rem;
+  }
+
+  .menu__box {
+    background-color: black;
+    width: 120px;
+    height: 200px;
+  }
+  .menu__item {
+    color: rgb(254, 212, 58);
+  }
+  .menu__item:hover {
+    background-color: rgb(254, 212, 58);
+    color: black;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .menu__btn {
+    right: 70px;
+  }
+
+  .right-side > .button-right {
+    border-color: rgb(254, 212, 58);
+    background-color: rgb(0, 0, 0);
+    margin-right: 9px;
+    margin-bottom: 12rem;
+  }
+
+  .button-right > a {
+    color: rgb(254, 212, 58);
+  }
+  .portfolio-container {
+    height: 150vh;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 100%
+    );
+  }
+
+  .portfolio-title {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0%;
+    font-weight: 700;
+  }
+  .left-side-portfolio {
+    align-items: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-left: 25%;
+  }
+
+  .project-image > img {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+  .about-container {
+    height: 786px;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 100%
+    );
+  }
+
+  .about-title {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 8rem;
+    font-weight: 700;
+    color: rgb(254, 212, 58);
+  }
+  .centered-about {
+    display: block;
+    margin: auto;
+    margin-left: 7%;
+    float: left;
+    position: relative;
+    border: 10px solid rgb(254, 212, 58);
+    height: 200px;
+    width: 70vw;
+    min-width: fit-content;
+    background-color: black;
+    border-radius: 20px;
+  }
+
+  .my-about-image > img {
+    float: left;
+    width: 140px;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .about-description {
+    float: right;
+    font-size: 1em;
+    padding: 3rem;
+    width: 380px;
+  }
+}
+
+/* Small devices (ipads/laptops, 481px to 770px) */
+@media only screen and (max-width: 770px) {
+  .left-side-portfolio {
+    margin-left: 10%;
+  }
+
+  .project-image > img {
+    margin-right: 6rem;
+  }
+
+  .about-description {
+    font-size: 0.9em;
+    padding: 2rem;
+    width: 230px;
+  }
+
+  .my-about-image > img {
+    float: left;
+    width: 150px;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin: auto;
+    margin-left: 3%;
+  }
+
+  .centered-about {
+    margin: auto;
+    margin-left: 10%;
+    height: fit-content;
+    width: 70%;
+  }
+
+  .about-description {
+    float: right;
+    font-size: 1em;
+    padding: 1rem;
+    width: 200px;
+  }
+
+  .my-about-image > img {
+    width: 100px;
+  }
+}
+/* Smallest devices (phones, up to 481px) */
+@media only screen and (max-width: 481px) {
+  nav {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+  }
+  .menu__box {
+    top: 50px;
+    right: -100%;
+    width: 130px;
+    height: 200px;
+    background-color: black;
+  }
+
+  .second-row {
+    font-size: 2.7rem;
+  }
+
+  .name > .first-row,
+  .third-row {
+    font-size: 2.3rem;
+  }
+
+  .name {
+    margin-bottom: 20px;
+  }
+
+  .second-row {
+    margin-top: -20px;
+  }
+
+  .third-row {
+    margin-top: -20px;
+  }
+  .about-me {
+    font-size: 1rem;
+    width: 300px;
+  }
+  .portfolio-title {
+    font-size: 1.7rem;
+  }
+  .left-side-portfolio {
+    margin-left: 2%;
+  }
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    max-width: 250px;
+    margin-left: 3rem;
+  }
+  .project-made-with {
+    width: fit-content;
+    font-size: 12px;
+    padding: 10px 0;
+    max-width: 500px;
+    font-weight: 700;
+    margin-left: 3rem;
+    border: 1px solid;
+    border-color: white black;
+  }
+
+  .button-left-website {
+    margin-left: 3rem;
+  }
+  .project-image > img {
+    margin: 0;
+  }
+
+  .centered-about {
+    float: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: fit-content;
+    width: 60%;
+  }
+
+  .my-about-image > img {
+    display: flex;
+    margin: auto;
+    padding: auto;
+    float: none;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-description {
+    display: flex;
+    float: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    margin: auto;
+    padding: auto;
+    width: 200px;
+  }
+  .about-title {
+    font-size: 4rem;
+  }
+  .email,
+  .phone,
+  .cv {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .contact-info {
+    width: 300px;
+  }
+  .footer-container {
+    height: 20vh;
+  }
+  .fa {
+    margin: 10px;
+  }
+}
